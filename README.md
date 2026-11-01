@@ -108,7 +108,7 @@ Connect your phone or computer to the Wi-Fi network Robot-Companion (Password: n
 | **18650 Battery Holder** | 1 | Lord Of Robots | $2.68 | $2.68 | [View Link](https://lordofrobots.com/products/battery-holder-18650) |
 | **MPU6050** | 1 | AliExpress | $2.43 | $2.43 | [View Link](https://www.aliexpress.com/item/1005010057794277.html) |
 | **Estimated total shipping** | 1 | -- | $0.00 | $0.00 | -- |
-| **Total Estimated Cost** | | | | **~$28.18 CAD** | |
+| **Total Estimated Cost** | | | | **~$28.18 USD** | |
 
 
 
