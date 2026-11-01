@@ -20,4 +20,83 @@ Most desktop gadgets and robots sit static or require heavy cloud infrastructure
 - **Physical Touch Interaction:** Two capacitive touch sensors (one on the head, and one on the stomach to cycle modes).
 - **Neck Servo Mechanism:** A 1-plane micro servo allows the robot to look around, nod, and express personality.
 - **Digital Audio Output:** Uses a MAX98357A I2S amplifier and micro speaker to play dynamic tones, chimes, and alarms.
-- **Onboard Web Dashboard:** Broadcasts a local Wi-Fi Access Point
+- **Onboard Web Dashboard:** Broadcasts a local Wi-Fi Access Point (Robot-Companion) allowing full teleoperation and telemetry from any smartphone browser without external routers.
+- **1.8" TFT Visual UI:** Renders system states, mode indicators, and expression layouts in real-time.
+
+# How It Works
+
+The ESP32-S3 is the main controller with Arduino C++ firmware. It runs high speed non blocking loops (~200Hz) that integrates IMU sensor fusion, motor PWM outputs, capacitive touch polling and an HTTP server.
+
+Balance Loop: The ESP32-S3 receives accelerometer and gyroscope data from the MPU6050 using I2C. First the complementary filter filters out the noise in the signal, and the PID controller controls the N20 motors though the L298N Mini driver.
+
+Touch & Servo Controls: Switch between modes of operation thorough a state machine when the sensor on the stomach is tapped. Pressing the head sensors causes a nodding of the head and a chirp sound.
+
+Web Teleoperation: If the Access Point is connected to the robots local network, visit 192.168.4.1 to control the robot's drive direction, the neck servo, push weather data, or switch modes remotely.
+
+# Hardware Overview
+
+| Component | Purpose / Function |
+| :--- | :--- |
+| **ESP32-S3 DevKitC-1** | Main microcontroller core with dual-core processing and built-in Wi-Fi |
+| **MPU6050 Module** | 6-axis inertial measurement unit for tilt and balance detection |
+| **1.8" SPI TFT Display** | Renders operational status, menus, and visual feedback |
+| **MAX98357A Amplifier** | Converts I²S digital audio streams into amplified speaker output |
+| **Micro Speaker** | Plays system chimes, button clicks, and timer alarms |
+| **L298N Mini Driver** | Dual H-bridge motor driver supplying PWM speed control to motors |
+| **2x N20 Geared DC Motors** | Drive motors providing high-torque wheel actuation |
+| **SG90 Micro Servo** | Controls 1-plane mechanical neck movement |
+| **2x Capacitive Touch Pads** | Acts as interactive inputs for the head and stomach |
+| **2S 18650 Battery Pack** | Provides ~7.4V primary system power |
+| **DC-DC Step-Down Buck** | Steps 7.4V battery voltage down to a clean regulated 5V rail |
+
+
+# Wiring Diagram & Pin Connections
+
+<img width="733" height="398" alt="image" src="https://github.com/user-attachments/assets/4e4255d1-422c-454d-807e-421793afcee2" />
+
+| Module / Signal | ESP32-S3 Pin |
+| :--- | :--- |
+| **MPU6050 SDA** | `GPIO 8` |
+| **MPU6050 SCL** | `GPIO 9` |
+| **TFT SCK** | `GPIO 7` |
+| **TFT MOSI (SDA)** | `GPIO 11` |
+| **TFT CS** | `GPIO 10` |
+| **TFT RESET** | `GPIO 12` |
+| **TFT DC (A0)** | `GPIO 13` |
+| **MAX98357A DIN** | `GPIO 15` |
+| **MAX98357A BCLK** | `GPIO 16` |
+| **MAX98357A LRC** | `GPIO 17` |
+| **Neck Servo Signal** | `GPIO 4` |
+| **Head Touch Sensor** | `GPIO 1` |
+| **Stomach Touch Sensor** | `GPIO 2` |
+| **L298N IN1 / IN2** | `GPIO 5 / GPIO 6` |
+| **L298N IN3 / IN4** | `GPIO 14 / GPIO 38` |
+
+# Software Setup
+The firmware is written in Arduino C++ for the ESP32-S3.
+
+Required Libraries
+Adafruit GFX Library
+
+Adafruit ST7735 and ST7789 Library
+
+ESP32Servo
+
+Built-in board core libraries (WiFi, WebServer, Wire, driver/i2s.h)
+
+Setup Instructions
+Install the Arduino IDE and configure the ESP32 board package.
+
+Install the required Adafruit display and servo libraries via the Arduino Library Manager.
+
+Wire all electronic modules according to the pin table and power schematic.
+
+Open firmware/Robot_Professional_Sleep.ino in the Arduino IDE.
+
+Select your ESP32-S3 board and correct COM port, then flash the firmware.
+
+Connect your phone or computer to the Wi-Fi network Robot-Companion (Password: nugget1234) and navigate to [http://192.168.4.1](http://192.168.4.1)
+
+
+
+
