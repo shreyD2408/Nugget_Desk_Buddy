@@ -97,6 +97,19 @@ Select your ESP32-S3 board and correct COM port, then flash the firmware.
 
 Connect your phone or computer to the Wi-Fi network Robot-Companion (Password: nugget1234) and navigate to [http://192.168.4.1](http://192.168.4.1)
 
+| Item | Qty | Supplier | Cost/item | Total Cost | Link |
+| :--- | :---: | :--- | :---: | :---: | :--- |
+| **ESP32-S3-DevKitC-1** | 1 | AliExpress | $6.36 | $6.36 | [View Link](https://www.aliexpress.com/item/1005006737960797.html) |
+| **1.8" TFT Display** | 1 | AliExpress | $3.47 | $3.47 | [View Link](https://www.aliexpress.com/item/1005006139989470.html) |
+| **Capacitive Touch Sensors** | 1 | AliExpress | $2.96 | $2.96 | [View Link](https://www.aliexpress.com/item/1005006246380749.html) |
+| **MAX98357A Audio Amplifier** | 1 | AliExpress | $1.55 | $1.55 | [View Link](https://www.aliexpress.com/item/1005007003802663.html) |
+| **L298N Mini** | 1 | AliExpress | $1.57 | $1.57 | [View Link](https://www.aliexpress.com/item/1005012607171084.html) |
+| **18650 Lithium Cells (2-Pack)** | 1 | Lord Of Robots | $7.16 | $7.16 | [View Link](https://lordofrobots.com/products/18650b-lithium-ion-battery-2-pcs) |
+| **18650 Battery Holder** | 1 | Lord Of Robots | $2.68 | $2.68 | [View Link](https://lordofrobots.com/products/battery-holder-18650) |
+| **MPU6050** | 1 | AliExpress | $2.43 | $2.43 | [View Link](https://www.aliexpress.com/item/1005010057794277.html) |
+| **Estimated total shipping** | 1 | -- | $0.00 | $0.00 | -- |
+| **Total Estimated Cost** | | | | **~$28.18 CAD** | |
+
 
 
 
