@@ -14,5 +14,10 @@ Most desktop gadgets and robots sit static or require heavy cloud infrastructure
   - **Completely Autonomous IoT:** Building a lightweight, embedded HTTP web server and Wi-Fi Access Point so the robot can be teleoperated instantly from any smartphone
     browser without needing internet or external routers.
 
-
-
+# Features
+- **Real-Time Self-Balancing:** Uses an MPU6050 6-axis IMU fused with a software complementary filter and a PID control loop to keep the robot upright.
+- **Multimodal State Machine:** Features 5 distinct operational modes (Self-Balance, Weather Station, RC Drive, Pomodoro Timer, and Sleep Mode).
+- **Physical Touch Interaction:** Two capacitive touch sensors (one on the head, and one on the stomach to cycle modes).
+- **Neck Servo Mechanism:** A 1-plane micro servo allows the robot to look around, nod, and express personality.
+- **Digital Audio Output:** Uses a MAX98357A I2S amplifier and micro speaker to play dynamic tones, chimes, and alarms.
+- **Onboard Web Dashboard:** Broadcasts a local Wi-Fi Access Point
