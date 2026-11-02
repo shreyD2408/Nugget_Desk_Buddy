@@ -2,6 +2,8 @@
 
 A 2-wheeled self-balancing companion robot powered by an ESP32-S3 DevKitC-1 microcontroller. This project aims to demonstrate capacitive touch sensors, digital I2S audio feedback, real-time MPU6050 PID balancing, a neck servo mechanism and an on-board, custom 1.8" TFT display with an embedded web dashboard via the web.
 
+Onshape link: https://cad.onshape.com/documents/6570ee29fc712611aa310320/w/57513aa0a7740111bfab2bbb/e/bac80f44cb6ddcee5dea2d08?renderMode=0&uiState=6ae8fbc61a639d97b7d5a09f
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/a2a8372d-382e-431e-a9a8-776102be1087" />
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/da833e06-0b3b-438f-8dcd-0f77fca0d122" />
 
