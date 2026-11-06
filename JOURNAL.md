@@ -6,7 +6,7 @@
 > [!NOTE]
 > This devlog is mirrored from [Half Life](https://halflife.hackclub.com) ([open the project](https://halflife.hackclub.com/projects/f4esei13xrel8ebnuniq8spb)). Editing it here will not change the platform's copy, and the next sync overwrites this file.
 
-> Dk yet
+> An interactive, two-wheeled self-balancing companion robot built around an ESP32-S3 DevKitC-1 microcontroller. This project combines high-speed embedded control loops, physical computing, and IoT web interfaces by integrating real-time MPU6050 PID balancing, digital I2S audio feedback, capacitive touch sensors, a mechanical neck servo, and a custom 1.8-inch TFT display with an onboard HTTP web dashboard for seamless wireless teleoperation.
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
